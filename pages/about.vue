@@ -1,10 +1,9 @@
 <template>
-    <div>
-        <h2>About</h2>
+    <div class="flex flex-col gap-9">
+        <h2 class="text-5xl">About</h2>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, beatae?</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, beatae?</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, beatae?</p>
-        <nuxt-link to="/">Back to home</nuxt-link>
     </div>
 </template>
 

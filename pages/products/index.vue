@@ -2,13 +2,15 @@
 
 <template>
     <div>
-        Product Page
-        <nuxt-link to="/">Back to home</nuxt-link>
+        <h1 class="text-4xl">Product Page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, a.</p>
     </div>
 </template>
 
 <script setup>
-
+    definePageMeta({
+        layout: 'products'
+    })
 </script>
 
 <style lang="scss" scoped>
