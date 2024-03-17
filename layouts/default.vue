@@ -1,15 +1,9 @@
 <template>
-    <div>
-        <nav class="w-full shadow-md border border-zinc-300 flex items-center justify-between py-6 font-medium">
-            <NuxtLink to="/">Home</NuxtLink>
-            <ul class="flex items-center gap-9">
-               
-                <li><NuxtLink to="/about">About</NuxtLink></li>
-                <li><NuxtLink to="/products">Product</NuxtLink></li>
-                <li><NuxtLink to="/products/braya">ProductDetail</NuxtLink></li>
-            </ul>
-        </nav>
-    </div>
+        <ul class="flex items-center justify-center gap-20 border-b border-zinc-300 shadow-md py-9 text-3xl">
+            <li><NuxtLink to="/">Home</NuxtLink></li>
+            <li><NuxtLink to="/about">About</NuxtLink></li>
+            <li><NuxtLink to="/products">Product</NuxtLink></li>
+        </ul>
 
     <div>
         <slot/>
@@ -23,6 +17,6 @@
 <style scoped>
 
     .router-link-exact-active{
-        color: red
+        color: #50C878
     }
 </style>

@@ -1,6 +1,7 @@
 <template>
-    <div class="flex flex-col gap-9">
-        <h2 class="text-5xl">Home</h2>
+    <div class="container mx-auto p-36 grid gap-9">
+        <h1 class="text-5xl">Home</h1>
+        <hr>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, beatae?</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, beatae?</p>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus, beatae?</p>
@@ -12,9 +13,5 @@
 </script>
 
 <style scoped>
-    ul{
-        display: flex;
-        justify-items: center;
-        gap: 30px;
-    }
+    
 </style>

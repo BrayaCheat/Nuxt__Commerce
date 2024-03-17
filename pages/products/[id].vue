@@ -1,41 +1,27 @@
 <!-- /products/:id -->
 
 <template>
-    <div class="grid grid-cols-2 place-items-center p-9 border shadow-md">
-        <img :src="product.image" alt="" class="h-full w-80 object-contain">
-        <div class="grid gap-3">
-            <NuxtLink to="/products">Go Back</NuxtLink>
-            <h1>{{ product.category }}</h1>
-            <div class="flex items-center justify-between">
-                <h1 class="text-2xl">{{ product.title }}</h1>
-                <span class="text-xl text-red-600">${{ product.price }}</span>
-            </div>
-            <article>
-                {{ product.description }}
-            </article>
-        </div>
+  <div class="container mx-auto lg:p-36 p-3 grid place-items-stretch gap-9">
+    <h1 class="text-5xl">Product Page</h1>
+    <hr />
+
+    <div v-if="product">
+      <product__detail :product="product" />
     </div>
+    <div v-else>
+      <h1 class="animated-pulse">Loading...</h1>
+    </div>
+  </div>
 </template>
 
 <script setup>
-import axios from 'axios';
-
-    const {id} = useRoute().params
-    const product = ref('')
-    definePageMeta({
-        layout: 'products'
-    })
-
-    onMounted(async () => {
-        try {
-            await axios.get(`https://fakestoreapi.com/products/${id}`)
-            .then((res) => product.value = res.data)
-        } catch (error) {
-            console.log(error)
-        }
-    })
+definePageMeta({
+  layout: "products",
+});
+const { id } = useRoute().params;
+const { data: product } = await useFetch(
+  `https://fakestoreapi.com/products/${id}`
+);
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>
