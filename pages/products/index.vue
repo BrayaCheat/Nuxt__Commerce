@@ -2,11 +2,11 @@
 
 <template>
   <div class="container mx-auto lg:p-36 p-3 grid place-items-stretch gap-9">
-    <h1 class="text-5xl">Product Page</h1>
+    <h1 class="text-5xl">Product Page / {{ currentPage }}</h1>
     <hr />
 
     <div
-      v-if="paginate"
+      v-if="products.length > 0"
       class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-9"
     >
       <div v-for="p in paginate" :key="p.id">
@@ -48,7 +48,7 @@
     </div>
 
     <div v-else>
-      <h1 class="animated-pulse">Loading...</h1>
+      <h1 class="animate-pulse text-4xl">Loading...</h1>
     </div>
   </div>
 </template>
