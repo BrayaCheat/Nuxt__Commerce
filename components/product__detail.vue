@@ -1,5 +1,5 @@
 <template>
-    <div class="grid grid-cols-2 place-items-start p-9 border shadow-md gap-9">
+    <div class="grid lg:grid-cols-2 place-items-start p-9 border shadow-md gap-9">
         <img :src="product.image" alt="" class="h-96 w-full object-contain">
         <div class="grid gap-3">
             <NuxtLink to="/products" class="text-2xl hover:underline">Go Back</NuxtLink>

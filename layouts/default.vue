@@ -1,9 +1,12 @@
 <template>
-        <ul class="flex items-center justify-center gap-20 border-b border-zinc-300 shadow-md py-9 text-3xl">
+    <nav class="border-b border-zinc-300 shadow-md">
+        <ul class="flex items-center container mx-auto px-36 gap-20  py-9 text-3xl">
             <li><NuxtLink to="/">Home</NuxtLink></li>
             <li><NuxtLink to="/about">About</NuxtLink></li>
             <li><NuxtLink to="/products">Product</NuxtLink></li>
         </ul>
+    </nav>
+        
 
     <div>
         <slot/>
