@@ -2,8 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
 *{
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
 }
+
+body {
+    @apply antialiased font-sans text-foreground bg-background;
+  }
+  
